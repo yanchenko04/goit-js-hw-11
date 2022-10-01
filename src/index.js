@@ -1,4 +1,4 @@
-import './css/styles.css';
+import './css/style.css';
 import Notiflix from 'notiflix';
 import SimpleLightbox from 'simplelightbox';
 import "simplelightbox/dist/simple-lightbox.min.css";
@@ -39,7 +39,6 @@ async function onFormSubmit(e) {
 
 }
 
-// Функция при Добавить ещё
 function onLoadMore() {
     GalleryEl.incrementPage();
     fetchGallery();
@@ -47,14 +46,11 @@ function onLoadMore() {
 }
  
 async function fetchGallery() {
-        // Скрываем кнопку
     refs.loadMoreBtn.classList.add('is-hidden');
     
-    // refs.startBtn.disabled = false;
     const response = await GalleryEl.fetchGallery();
     const { hits, total } = response;
 
-    // Если бэкенд возвращает пустой массив, значит ничего подходящего найдено небыло
     if (!hits.length) {
         Notiflix.Notify.failure(
             'Sorry, there are no images matching your search query. Please try again.'
@@ -66,11 +62,10 @@ async function fetchGallery() {
     isShown += hits.length;
 
     if (isShown < total) {
-        // Показывае кнопку
         refs.loadMoreBtn.classList.remove('is-hidden');
 
     }
-    // Если пользователь дошел до конца коллекции, пряч кнопку и выводи уведомление с текстом:
+   
     if (isShown >= total) {
         Notiflix.Notify.info(
             'We re sorry, but you have reached the end of search results.'
@@ -78,7 +73,7 @@ async function fetchGallery() {
     }
 }
 
-// Рисуем карточки
+
 function renderGallery(elements) {
     console.log(elements);
     const markup = elements.map(({
@@ -116,7 +111,6 @@ function renderGallery(elements) {
             </a>`;
     })
         .join('');
-    // Добавляем на галерею карточек библиотеку SimpleLightbox
     refs.divEl.insertAdjacentHTML('beforeend', markup);
     const simpleLightbox = new SimpleLightbox('.gallery a');
 }

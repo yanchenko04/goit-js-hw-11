@@ -1,0 +1,108 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #efcc9ca8;
+    color: #212121;
+    line-height: 1.5;
+}
+
+.search-form {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  
+  input {
+    width: 420px;
+    height: 50px;
+    padding: 20px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    border: 2px solid rgba(72, 11, 187, 0.718);
+    }
+  input:hover {
+    
+    border: 2px solid rgba(69, 255, 40, 0.718);
+  }
+
+  .is-hidden {
+    display: none;
+  }
+  
+  button {
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+    margin-left: 20px;
+    background-color: white;
+    color: black;
+  }
+
+  button:hover {
+    transform: scale(1.1);
+  }
+  
+  .load-more {
+  
+  display: block;
+   margin: auto;
+  }
+  
+  .is-hidden {
+    display: none;
+  }
+
+
+  .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -30px;
+        margin-top: -30px;
+        justify-content: center;
+        align-items: center;
+  
+  }
+
+  .photo-card {
+    flex-basis: calc((100% - 10 * 15px) / 5);
+    height: 240px;
+  }
+  
+  .gallery__link {
+    flex-basis: calc((100% - 10 * 15px) / 5);
+   margin-left: 15px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+}
+
+.info {
+    display: flex;
+    border: 2px solid rgb(254, 167, 61);
+    padding: 5px;
+    text-align: center;
+    background-color: #c9f8ff;
+  }
+  
+  .info-item {
+    margin-left: 10px;
+    color: black;
+  }
+  
+  .info-item:first-child {
+    margin-left: 0;
+  }
+  
+  .gallery__link {
+    text-decoration: none;
+  }
+  
