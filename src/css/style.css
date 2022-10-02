@@ -41,10 +41,13 @@ body {
     margin-left: 20px;
     background-color: white;
     color: black;
+    border-radius: 15px;
+    border: 2px solid rgba(72, 11, 187, 0.718);
   }
 
   button:hover {
     transform: scale(1.1);
+    border: 2px solid rgba(69, 255, 40, 0.718)
   }
   
   .load-more {
@@ -66,6 +69,7 @@ body {
         margin-top: -30px;
         justify-content: center;
         align-items: center;
+        margin-bottom: 20px;
   
   }
 
