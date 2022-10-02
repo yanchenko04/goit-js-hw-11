@@ -50,7 +50,8 @@ body {
   .load-more {
   
   display: block;
-   margin: auto;
+  margin-top: 20px;
+  margin: auto;
   }
   
   .is-hidden {
